@@ -1,28 +1,23 @@
-# Run below commands to publish a new release
+to deploy this app as jar there are two ways  
+1. push to main branch as pipeline is configured to take care of everthing else
+2. follow below steps
 
-
-`mvn install:install-file -DgroupId=mak -DartifactId=JavaUtilities -Dversion=1.0 -Dfile=JavaUtilities-1.0.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=.  -DcreateChecksum=true`
-
-
-`git add -A . && git commit -m "released version 1.0"`
-
-`git push origin`
-
-
+## Steps
 use settings.xml withe below content. 
 generate token from
 https://github.com/settings/tokens
 
 run the below command to publish the jar
-mvn --settings {path_to_settings.xml} deploy
+`mvn --settings {path_to_settings.xml} deploy`
+
 eg:
-mvn --settings C:\Users\kmateen\.m2\github_settings.xml deploy
+`mvn --settings C:\Users\kmateen\.m2\github_settings.xml deploy`
 
 <br/><br/><br/><br/><br/>
 
 
 
-`
+<pre>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
@@ -60,4 +55,4 @@ http://maven.apache.org/xsd/settings-1.0.0.xsd">
   </servers>
 </settings>
 
-`
+</pre>

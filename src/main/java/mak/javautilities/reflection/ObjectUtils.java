@@ -5,7 +5,7 @@ import org.springframework.util.Assert;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class ReflectionUtils {
+public class ObjectUtils {
 
     public static String invokeGetter(Object target, String filed) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         return (String) target.getClass().getMethod(getterMethod(filed)).invoke(target);
