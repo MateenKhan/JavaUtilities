@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>mak</groupId>
-    <artifactId>JavaUtilities</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>JavaUtilities</name>
-    <description>JavaUtilities</description>
+    <artifactId>javautilities</artifactId>
+    <version>1.0.0</version>
+    <name>javautilities</name>
+    <description>javautilities</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -50,4 +50,11 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub MateenKhan Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/MateenKhan/REPOSITORY</url>
+        </repository>
+    </distributionManagement>
 </project>
