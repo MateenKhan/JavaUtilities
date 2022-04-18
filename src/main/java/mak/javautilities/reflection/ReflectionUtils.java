@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class ReflectionUtils {
 
-    public static String getMethod(Object target, String filed) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public static String invokeGetter(Object target, String filed) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         return (String) target.getClass().getMethod(getterMethod(filed)).invoke(target);
     }
 
@@ -16,4 +16,3 @@ public class ReflectionUtils {
         return "get" + (field.charAt(0) + "").toUpperCase() + field.substring(1);
     }
 }
-
