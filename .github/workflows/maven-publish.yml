@@ -3,9 +3,8 @@
 
 name: Maven Deploy
 
-on:
-  release:
-    types: [created]
+on: [workflow_dispatch]
+
 
 jobs:
   build:
