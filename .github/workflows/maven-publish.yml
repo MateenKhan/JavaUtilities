@@ -3,7 +3,9 @@
 
 name: Maven Deploy
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [ main ]
 
 
 jobs:
